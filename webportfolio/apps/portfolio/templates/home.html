@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load static %}
+<header class="header row bg-white shadow-md p-6 rounded-lg">
+    <div class="header-content col-md-4 text-center">
+        <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile image" class="img-fluid rounded-circle mb-3">
+    </div>
+    <div class="col-md-8 my auto">
+        <h1 class="text-dark mb-3">Hi, I'm <strong>Eber Josue</strong></h1>
+        <h3 class=" h3 text-secondary mb-4">Im a System Engineer and Web Developer</h3>
+        <p class="text-muted mt-3">
+            I am a Systems Engineering student with a passion for technology, problem-solving, and innovation. Currently pursuing my degree, I have been involved in projects like LogicTrack, where I contributed to implementing practical solutions with real-life applications. This experience has strengthened my skills in programming, software development, and system design, and I am eager to apply my knowledge to tackle real-world challenges and grow in a dynamic, fast-paced environment
+        </p>
+        <a href="{% static 'portfolio/CV.pdf' %}" class="btn btn-primary mt-3"
+        >Download CV</a>
+    </div>
+</header>
+<div class="row my-4 text-center">
+    <h1 class="text-dark">My projects</h1>
+    <p class="text-muted">Here are some of the projects I've worked on:</p>
+    {% for project in projects %}
+<div class="col-md-4 p-4">
+    <div class="card  card-project">
+        <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top">
+        <div class="card-body">
+
+            <h2 class="text-dark">{{project.title}}</h2>
+            <p class="text-muted">{{project.description}}</p>
+{% if project.url %}
+<a href="{{project.url}}" class="btn btn-outline-primary btn-sm" target="_blank">View project</a>
+{% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+    </div>
+<button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <i class="fas fa-chevron-up"></i>
+</button>
+{% endblock %}
+
+</div>
+
