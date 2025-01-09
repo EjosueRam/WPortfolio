@@ -83,8 +83,10 @@ WSGI_APPLICATION = 'webportfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-     'default': dj_database_url.config(
-        default='postgresql://USER:PASSWORD@HOST:PORT/DB_NAME'
+'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        conn_max_age=600
     )
 }
 
