@@ -3,7 +3,7 @@
 {% load static %}
 <header class="header row bg-white shadow-md p-6 rounded-lg">
     <div class="header-content col-md-4 text-center">
-        <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile image" class="img-fluid rounded-circle mb-3">
+        <img src="{% staticfiles 'portfolio/profile.jpg' %}" alt="Profile image" class="img-fluid rounded-circle mb-3">
     </div>
     <div class="col-md-8 my auto">
         <h1 class="text-dark mb-3">Hi, I'm <strong>Eber Josue</strong></h1>
@@ -11,7 +11,7 @@
         <p class="text-muted mt-3">
             I am a Systems Engineering student with a passion for technology, problem-solving, and innovation. Currently pursuing my degree, I have been involved in projects like LogicTrack, where I contributed to implementing practical solutions with real-life applications. This experience has strengthened my skills in programming, software development, and system design, and I am eager to apply my knowledge to tackle real-world challenges and grow in a dynamic, fast-paced environment
         </p>
-        <a href="{% static 'portfolio/CV.pdf' %}" class="btn btn-primary mt-3"
+        <a href="{% staticfiles 'portfolio/CV.pdf' %}" class="btn btn-primary mt-3"
         >Download CV</a>
     </div>
 </header>
